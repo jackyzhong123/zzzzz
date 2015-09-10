@@ -1,31 +1,31 @@
 //
-//  DetailWebVC.swift
+//  DetailWebWithBarVC.swift
 //  htmlHdy
 //
-//  Created by Sky on 15/9/8.
+//  Created by haha on 15/9/10.
 //  Copyright (c) 2015年 HuoDongOrganizer. All rights reserved.
 //
 
 import UIKit
 
-class DetailWebVC: RootVC ,UIWebViewDelegate{
-
+class DetailWebWithBarVC:RootVC ,UIWebViewDelegate{
+    
+    
+    
     
     @IBOutlet var webView: UIWebView!
     var Url:String!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
     
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
     
     
- 
-    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
     
     
     override func RenderDetail() {
@@ -35,6 +35,8 @@ class DetailWebVC: RootVC ,UIWebViewDelegate{
         var urlRequest = NSURLRequest(URL:NSURL(string:Url)!)
         webView.loadRequest(urlRequest)
         webView.delegate =  self
+        
+        self.navigationController?.navigationBar.hidden = false   //显示navigationbar
     }
     
     override func changeUserStatus (notification:NSNotification)
@@ -43,8 +45,7 @@ class DetailWebVC: RootVC ,UIWebViewDelegate{
     }
     
     
-     func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
-        
+    func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
         
         var urlString = request.URL?.absoluteString as String!
         if(!urlString.hasBegin("ios://"))
@@ -85,8 +86,8 @@ class DetailWebVC: RootVC ,UIWebViewDelegate{
             self.navigationController?.pushViewController(vc, animated: true)
         }
         return false
-
-  
+        
+        
     }
     
     override func ButtonTap(tag: Int) {
@@ -96,7 +97,7 @@ class DetailWebVC: RootVC ,UIWebViewDelegate{
         }else
         {
             self.dismissViewControllerAnimated(true, completion: nil)
-        }       
+        }
     }
     
     func webViewDidStartLoad(webView: UIWebView) {
@@ -106,10 +107,10 @@ class DetailWebVC: RootVC ,UIWebViewDelegate{
     func webViewDidFinishLoad(webView: UIWebView) {
         
         //执行 js放在这里
-      //  webView.stringByEvaluatingJavaScriptFromString("$('.navbar').hide()")
+        //  webView.stringByEvaluatingJavaScriptFromString("$('.navbar').hide()")
         
-       // webView.stringByEvaluatingJavaScriptFromString("alter('hello')")
+        // webView.stringByEvaluatingJavaScriptFromString("alter('hello')")
     }
-
-
+    
+    
 }

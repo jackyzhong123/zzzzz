@@ -20,7 +20,7 @@ class AppConfig: NSObject {
     
     ////////////////////////////访问字符串
     //MARK: 一些基本的配置
-    static var SERVICE_ROOT_PATH = "http://192.168.1.26:47897/"
+    static var SERVICE_ROOT_PATH = "http://jacky.chinacloudsites.cn/"
     
     //MARK: 访问服务地址的配置
     //手机号登录

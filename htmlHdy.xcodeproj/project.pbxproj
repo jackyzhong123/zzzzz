@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1BC447341BA112AE00E5323A /* DetailWebWithBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC447331BA112AE00E5323A /* DetailWebWithBarVC.swift */; };
 		3365A8021B9EBFBF003FC997 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3365A8011B9EBFBF003FC997 /* AppDelegate.swift */; };
 		3365A8041B9EBFBF003FC997 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3365A8031B9EBFBF003FC997 /* FirstViewController.swift */; };
 		3365A8061B9EBFBF003FC997 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3365A8051B9EBFBF003FC997 /* SecondViewController.swift */; };
@@ -67,6 +68,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1BC447331BA112AE00E5323A /* DetailWebWithBarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailWebWithBarVC.swift; sourceTree = "<group>"; };
 		3365A7FC1B9EBFBF003FC997 /* htmlHdy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = htmlHdy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3365A8001B9EBFBF003FC997 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3365A8011B9EBFBF003FC997 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				3365A7FF1B9EBFBF003FC997 /* Supporting Files */,
 				3365A8981B9EC629003FC997 /* DetailWebVC.swift */,
 				33B2CB4C1B9F3E5300BA8622 /* FullScreenVC.swift */,
+				1BC447331BA112AE00E5323A /* DetailWebWithBarVC.swift */,
 			);
 			path = htmlHdy;
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 				TargetAttributes = {
 					3365A7FB1B9EBFBF003FC997 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = H677DXW325;
 					};
 					3365A8121B9EBFBF003FC997 = {
 						CreatedOnToolsVersion = 6.4;
@@ -485,6 +489,7 @@
 				3365A87D1B9EC1B9003FC997 /* UIImage+MultiFormat.m in Sources */,
 				3365A8061B9EBFBF003FC997 /* SecondViewController.swift in Sources */,
 				3365A8681B9EC1B9003FC997 /* AFHTTPRequestOperationManager.m in Sources */,
+				1BC447341BA112AE00E5323A /* DetailWebWithBarVC.swift in Sources */,
 				3365A8911B9EC225003FC997 /* Dictionary.swift in Sources */,
 				3365A8961B9EC225003FC997 /* TextBoxView.swift in Sources */,
 				3365A8811B9EC1B9003FC997 /* UIView+WebCacheOperation.m in Sources */,
@@ -640,6 +645,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = htmlHdy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -651,6 +657,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = htmlHdy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

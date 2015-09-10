@@ -23,10 +23,18 @@ class RootVC: UIViewController {
     var _doneButton:UIButton!;
     var IsNeedDoneButton:Bool = false
     
+    
+    func myFirstSubString(urlString:String,fromIndex:Int) ->String
+    {
+        var url = urlString.substringFromIndex(advance(urlString.startIndex, fromIndex))
+        return url
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.translucent = false  //不计Controller 高度
-        self.navigationController?.navigationBar.hidden = false   //显示navigationbar
+        self.navigationController?.navigationBar.hidden = true   //显示navigationbar
         
         RenderDetail()
         
@@ -36,10 +44,16 @@ class RootVC: UIViewController {
             NSNotificationCenter.defaultCenter().addObserver(self, selector: "handleKeyboardDidShow:", name: UIKeyboardDidShowNotification, object: nil)
             NSNotificationCenter.defaultCenter().addObserver(self, selector: "handleKeyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
         }
-//        
-//        var taphold =  UITapGestureRecognizer (target: self.navigationController!, action: "handleSingleFingerEvent:")
-//        taphold.numberOfTapsRequired = 3
-//        taphold.delegate = self
+        
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "changeUserStatus:", name: "GeneralNotification", object: nil)
+        
+ 
+        
+    }
+    
+    func changeUserStatus (notification:NSNotification)
+    {
         
     }
     
