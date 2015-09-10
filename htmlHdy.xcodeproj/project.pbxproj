@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1BC447341BA112AE00E5323A /* DetailWebWithBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC447331BA112AE00E5323A /* DetailWebWithBarVC.swift */; };
+		3315408A1BA11A8300FA75E4 /* FouthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331540891BA11A8300FA75E4 /* FouthVC.swift */; };
+		3315408C1BA1209800FA75E4 /* ThirdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3315408B1BA1209800FA75E4 /* ThirdVC.swift */; };
 		3365A8021B9EBFBF003FC997 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3365A8011B9EBFBF003FC997 /* AppDelegate.swift */; };
 		3365A8041B9EBFBF003FC997 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3365A8031B9EBFBF003FC997 /* FirstViewController.swift */; };
 		3365A8061B9EBFBF003FC997 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3365A8051B9EBFBF003FC997 /* SecondViewController.swift */; };
@@ -69,6 +71,8 @@
 
 /* Begin PBXFileReference section */
 		1BC447331BA112AE00E5323A /* DetailWebWithBarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailWebWithBarVC.swift; sourceTree = "<group>"; };
+		331540891BA11A8300FA75E4 /* FouthVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FouthVC.swift; sourceTree = "<group>"; };
+		3315408B1BA1209800FA75E4 /* ThirdVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdVC.swift; sourceTree = "<group>"; };
 		3365A7FC1B9EBFBF003FC997 /* htmlHdy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = htmlHdy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3365A8001B9EBFBF003FC997 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3365A8011B9EBFBF003FC997 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -207,6 +211,8 @@
 				3365A8981B9EC629003FC997 /* DetailWebVC.swift */,
 				33B2CB4C1B9F3E5300BA8622 /* FullScreenVC.swift */,
 				1BC447331BA112AE00E5323A /* DetailWebWithBarVC.swift */,
+				331540891BA11A8300FA75E4 /* FouthVC.swift */,
+				3315408B1BA1209800FA75E4 /* ThirdVC.swift */,
 			);
 			path = htmlHdy;
 			sourceTree = "<group>";
@@ -485,8 +491,10 @@
 				3365A8741B9EC1B9003FC997 /* SDImageCache.m in Sources */,
 				33B2CB4D1B9F3E5300BA8622 /* FullScreenVC.swift in Sources */,
 				3365A8721B9EC1B9003FC997 /* MKAnnotationView+WebCache.m in Sources */,
+				3315408C1BA1209800FA75E4 /* ThirdVC.swift in Sources */,
 				3365A86B1B9EC1B9003FC997 /* AFSecurityPolicy.m in Sources */,
 				3365A87D1B9EC1B9003FC997 /* UIImage+MultiFormat.m in Sources */,
+				3315408A1BA11A8300FA75E4 /* FouthVC.swift in Sources */,
 				3365A8061B9EBFBF003FC997 /* SecondViewController.swift in Sources */,
 				3365A8681B9EC1B9003FC997 /* AFHTTPRequestOperationManager.m in Sources */,
 				1BC447341BA112AE00E5323A /* DetailWebWithBarVC.swift in Sources */,

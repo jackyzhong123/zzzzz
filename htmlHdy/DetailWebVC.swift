@@ -53,24 +53,33 @@ class DetailWebVC: RootVC ,UIWebViewDelegate{
         }
         if (urlString == "ios://AppGoBack")   //关闭该 ViewController
         {
-            self.dismissViewControllerAnimated(true, completion: nil)
+           
+                if (self.navigationController == nil)
+                {
+                    self.dismissViewControllerAnimated(true, completion: nil)
+                }else
+                {
+                    self.navigationController?.popViewControllerAnimated(true)
+                }
+                
+         
         }else if (urlString == "ios://Notification")   //发起通知
         {
             NSNotificationCenter.defaultCenter().postNotificationName("GeneralNotification", object: nil)
-        }else if (urlString.hasBegin("ios://modal|bar|"))
+        }else if (urlString.hasBegin("ios://modal_bar_"))
         {
             
-            var vc = UIHelper.GetVCWithIDFromStoryBoard(.Main, viewControllerIdentity: "DetailWebWithBarVC") as! DetailWebVC
+            var vc = UIHelper.GetVCWithIDFromStoryBoard(.Main, viewControllerIdentity: "DetailWebWithBarVC") as! DetailWebWithBarVC
             vc.Url =  myFirstSubString(urlString,fromIndex: 16).stringByReplacingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
             //self.navigationController?.pushViewController(vc, animated: true)
             self.presentViewController(vc, animated: true, completion: nil)
             
-        }else if (urlString.hasBegin("ios://push|bar|"))
+        }else if (urlString.hasBegin("ios://push_bar_"))
         {
-            var vc = UIHelper.GetVCWithIDFromStoryBoard(.Main, viewControllerIdentity: "DetailWebWithBarVC") as! DetailWebVC
+            var vc = UIHelper.GetVCWithIDFromStoryBoard(.Main, viewControllerIdentity: "DetailWebWithBarVC") as! DetailWebWithBarVC
             vc.Url =  myFirstSubString(urlString,fromIndex: 15).stringByReplacingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
             self.navigationController?.pushViewController(vc, animated: true)
-        }else if (urlString.hasBegin("ios://modal|nobar|"))
+        }else if (urlString.hasBegin("ios://modal_nobar_"))
         {
             
             var vc = UIHelper.GetVCWithIDFromStoryBoard(.Main, viewControllerIdentity: "DetailWebVC") as! DetailWebVC
@@ -78,7 +87,7 @@ class DetailWebVC: RootVC ,UIWebViewDelegate{
             //self.navigationController?.pushViewController(vc, animated: true)
             self.presentViewController(vc, animated: true, completion: nil)
             
-        }else if (urlString.hasBegin("ios://push|nobar|"))
+        }else if (urlString.hasBegin("ios://push_nobar_"))
         {
             var vc = UIHelper.GetVCWithIDFromStoryBoard(.Main, viewControllerIdentity: "DetailWebVC") as! DetailWebVC
             vc.Url =  myFirstSubString(urlString,fromIndex: 17).stringByReplacingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
@@ -95,8 +104,16 @@ class DetailWebVC: RootVC ,UIWebViewDelegate{
             webView.goBack()
         }else
         {
-            self.dismissViewControllerAnimated(true, completion: nil)
-        }       
+            if (self.navigationController == nil)
+            {
+                self.dismissViewControllerAnimated(true, completion: nil)
+            }else
+            {
+                self.navigationController?.popViewControllerAnimated(true)
+            }
+            
+            
+        }
     }
     
     func webViewDidStartLoad(webView: UIWebView) {

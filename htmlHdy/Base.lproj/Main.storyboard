@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -38,10 +38,43 @@
             </objects>
             <point key="canvasLocation" x="656" y="-1266"/>
         </scene>
+        <!--ThirdVC-->
+        <scene sceneID="Hpa-XE-bYz">
+            <objects>
+                <viewController id="XQr-C3-vJA" customClass="ThirdVC" customModule="htmlHdy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XQ2-I6-lZW"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tbb-U8-jXm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0QC-3b-Uva">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FY7-GY-sJG">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="FY7-GY-sJG" secondAttribute="trailing" constant="-16" id="67g-Rq-McZ"/>
+                            <constraint firstItem="FY7-GY-sJG" firstAttribute="top" secondItem="0QC-3b-Uva" secondAttribute="topMargin" id="aAf-UL-sMJ"/>
+                            <constraint firstItem="FY7-GY-sJG" firstAttribute="leading" secondItem="0QC-3b-Uva" secondAttribute="leadingMargin" constant="-16" id="hBq-BB-0sp"/>
+                            <constraint firstItem="Tbb-U8-jXm" firstAttribute="top" secondItem="FY7-GY-sJG" secondAttribute="bottom" id="wax-ql-vlt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="FY7-GY-sJG" id="SFx-gA-Yj4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QJJ-4S-PBi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1198" y="-1709"/>
+        </scene>
         <!--Detail Web With BarVC-->
         <scene sceneID="cKc-SW-aWb">
             <objects>
-                <viewController storyboardIdentifier="DetailWebWithBarVC" id="jcE-Kw-o0F" customClass="DetailWebWithBarVC" customModule="htmlHdy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailWebWithBarVC" hidesBottomBarWhenPushed="YES" id="jcE-Kw-o0F" customClass="DetailWebWithBarVC" customModule="htmlHdy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Wee-3f-hgi"/>
                         <viewControllerLayoutGuide type="bottom" id="Onc-yQ-mME"/>
@@ -169,7 +202,7 @@
         <!--我的-->
         <scene sceneID="ebF-wc-rrg">
             <objects>
-                <viewController id="vTt-vA-W6n" sceneMemberID="viewController">
+                <viewController id="vTt-vA-W6n" customClass="FouthVC" customModule="htmlHdy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Hiw-t7-RLN"/>
                         <viewControllerLayoutGuide type="bottom" id="iVB-sq-fD9"/>
@@ -177,6 +210,17 @@
                     <view key="view" contentMode="scaleToFill" id="I9R-Yn-KX6">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bU4-Z1-54m">
+                                <rect key="frame" x="65" y="70" width="60" height="30"/>
+                                <state key="normal" title="清楚缓存">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnPageTapped:" destination="vTt-vA-W6n" eventType="touchUpInside" id="dYY-TM-b3d"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="我的" image="me" id="Suo-y5-tfL"/>
