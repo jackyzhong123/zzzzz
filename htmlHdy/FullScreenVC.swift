@@ -26,28 +26,7 @@ class FullScreenVC: RootVC ,UIWebViewDelegate{
     }
 
     
-    func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
-        var urlString = request.URL?.absoluteString as String!
-        if (urlString == "ios://appGoBack")
-        {
-            self.navigationController?.popViewControllerAnimated(true)
-        }
-        
-        
-        if(urlString.hasBegin("ios://"))
-        {
-            
-            var url = urlString.substringFromIndex(advance(urlString.startIndex, 6))
-            var vc = UIHelper.GetVCWithIDFromStoryBoard(.Main, viewControllerIdentity: "DetailWebVC") as! DetailWebVC
-            //   UserDefaultsHelper.setStringForKey(url, key: "targetUrl")
-            vc.Url =  url.stringByReplacingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
-        
-        return true
-    }
     
-
     
     
     
